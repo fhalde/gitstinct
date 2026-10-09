@@ -61,6 +61,9 @@ def fixrate(
     history: History,
     changeset: set[str],
 ) -> float:
+    """
+    How often files in the changeset were part of commits that "fixed" something.
+    """
     sample = [c for c in history.commits if c.files & changeset]
 
     fixes = sum(
