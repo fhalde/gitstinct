@@ -5,6 +5,7 @@ from collections import Counter
 @attr.define
 class Commit:
     sha: str
+    message: str
     files: set[str]
 
 
